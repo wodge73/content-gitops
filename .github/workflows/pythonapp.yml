@@ -7,8 +7,8 @@ on:
       
 jobs:
   build:
-    #runs-on: ubuntu-latest-arm64
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest-arm64
+    #runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
@@ -24,6 +24,6 @@ jobs:
       run: |
         cd ./python
         echo "${{ secrets.WODGE_SECRET }}" | docker login -u "wodge" --password-stdin
-        docker image build -t wodge/gitops:hellov1.3 .
-        wodge/gitops:hellov1.3
-        docker push wodge/gitops:hellov1.3
+        docker image build -t wodge/gitops:hellov1.4 .
+        wodge/gitops:hellov1.4
+        docker push wodge/gitops:hellov1.4
