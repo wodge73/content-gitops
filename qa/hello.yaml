@@ -19,7 +19,7 @@ spec:
         app: hello
     spec:
       containers:
-      - image: wodge/gitops:hellov1.3
+      - image: wodge/gitops:hellov1.4
         name: gitops
         resources: {}
 status: {}
