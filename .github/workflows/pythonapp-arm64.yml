@@ -1,4 +1,4 @@
-name: Python application
+name: ARM 64 Python application
 
 on:
   push:
