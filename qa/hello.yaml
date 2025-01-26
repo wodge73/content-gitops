@@ -22,4 +22,5 @@ spec:
       - image: wodge/gitops:hello-arm64-v1.4
         name: gitops
         resources: {}
+        imagePullPolicy: Always
 status: {}
