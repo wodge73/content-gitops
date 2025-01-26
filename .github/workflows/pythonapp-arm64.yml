@@ -33,7 +33,6 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        context: ./python
         platforms: linux/arm64
         push: true
         tags: wodge/gitops:hello-arm64-v1.4
