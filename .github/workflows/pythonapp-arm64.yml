@@ -40,5 +40,5 @@ jobs:
       run: |
         cd ./python
         echo "${{ secrets.WODGE_SECRET }}" | docker login -u "wodge" --password-stdin
-        docker buildx build --platform linux/arm64 -t wodge/gitops:hello-arm64-v1.4 .
-        docker push wodge/gitops:hello-arm64-v1.4
+        docker buildx build --platform linux/arm64 -t wodge/gitops:hello-arm64-v1.5 .
+        docker push wodge/gitops:hello-arm64-v1.5
