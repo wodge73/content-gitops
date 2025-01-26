@@ -30,15 +30,15 @@ jobs:
       with:
         username: wodge
         password: ${{ secrets.WODGE_SECRET }}
-    - name: Build and push
-      uses: docker/build-push-action@v2
-      with:
-        platforms: linux/arm64
-        push: true
-        tags: wodge/gitops:hello-arm64-v1.4
-    # - name: Build & Push Image
-    #   run: |
-    #     cd ./python
-    #     echo "${{ secrets.WODGE_SECRET }}" | docker login -u "wodge" --password-stdin
-    #     docker image build -t wodge/gitops:hello-arm64-v1.4 .
-    #     docker push wodge/gitops:hello-arm64-v1.4
+    # - name: Build and push
+    #   uses: docker/build-push-action@v2
+    #   with:
+    #     platforms: linux/arm64
+    #     push: true
+    #     tags: wodge/gitops:hello-arm64-v1.4
+    - name: Build & Push Image
+      run: |
+        cd ./python
+        echo "${{ secrets.WODGE_SECRET }}" | docker login -u "wodge" --password-stdin
+        docker buildx build --platform linux/arm64 -t wodge/gitops:hello-arm64-v1.4 .
+        docker push wodge/gitops:hello-arm64-v1.4
