@@ -19,7 +19,7 @@ spec:
         app: hello
     spec:
       containers:
-      - image: wodge/gitops:hello-arm64-v1.4
+      - image: wodge/gitops:hello-arm64-v1.6
         name: gitops
         resources: {}
         imagePullPolicy: Always
